@@ -20,3 +20,11 @@ INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('2.0
 
 INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) VALUES ('Trilha HTML', 'Conteúdo principal', 1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4hKyBpLdoJQXdbFkhCCRx0h0qy5j_vxAlEw&usqp=CAU', 1, 1);
 INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) VALUES ('Forum', 'perguntas', 2, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4hKyBpLdoJQXdbFkhCCRx0h0qy5j_vxAlEw&usqp=CAU', 2, 1);
+
+INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('Capitulo 1', 'primeiros passos', 1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4hKyBpLdoJQXdbFkhCCRx0h0qy5j_vxAlEw&usqp=CAU', 1, null);
+INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('Capitulo 2', 'HTML', 2, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4hKyBpLdoJQXdbFkhCCRx0h0qy5j_vxAlEw&usqp=CAU', 1, 1);
+INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('Capitulo 3', 'HTML + CSS', 3, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4hKyBpLdoJQXdbFkhCCRx0h0qy5j_vxAlEw&usqp=CAU', 1, 2);
+
+INSERT INTO tb_enrollment (available, enroll_moment, only_update, refund_moment, offer_id, user_id) VALUES (true, TIMESTAMP WITH TIME ZONE '2020-07-14T03:00:00Z', false, null, 1, 1); 
+INSERT INTO tb_enrollment (available, enroll_moment, only_update, refund_moment, offer_id, user_id) VALUES (true, TIMESTAMP WITH TIME ZONE '2021-07-14T03:00:00Z', true, null, 2, 1); 
+
