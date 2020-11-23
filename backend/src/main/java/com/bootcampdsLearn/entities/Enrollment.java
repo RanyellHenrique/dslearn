@@ -2,13 +2,16 @@ package com.bootcampdsLearn.entities;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 import com.bootcampdsLearn.entities.pk.EnrollmentPK;
 
@@ -29,6 +32,9 @@ public class Enrollment implements Serializable{
 	
 	@ManyToMany(mappedBy = "enrollmentsDone")
 	private Set<Lesson> lessonsDone = new HashSet<>();
+	
+	@OneToMany(mappedBy = "enrollment")
+	private List<Deliver> deliveries = new ArrayList<>();
 	
 	public Enrollment() {
 		
