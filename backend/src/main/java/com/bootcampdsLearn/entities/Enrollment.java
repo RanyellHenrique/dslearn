@@ -12,10 +12,12 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 import com.bootcampdsLearn.entities.pk.EnrollmentPK;
 
-@Entity(name = "tb_enrollment")
+@Entity
+@Table(name = "tb_enrollment")
 public class Enrollment implements Serializable{
 	private static final long serialVersionUID = 1L;
 	

@@ -10,8 +10,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
-@Entity(name = "tb_notification")
+@Entity
+@Table(name = "tb_notification")
 public class Notification implements Serializable{
 	private static final long serialVersionUID = 1L;
 	

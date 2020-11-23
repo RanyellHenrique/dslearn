@@ -9,8 +9,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
-@Entity(name = "tb_course")
+@Entity
+@Table(name = "tb_course")
 public class Course implements Serializable{
 	private static final long serialVersionUID = 1L;
 	

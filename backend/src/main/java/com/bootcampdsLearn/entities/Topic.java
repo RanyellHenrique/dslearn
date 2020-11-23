@@ -17,8 +17,10 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
-@Entity(name = "tb_topic")
+@Entity
+@Table(name = "tb_topic")
 public class Topic implements Serializable{
 	private static final long serialVersionUID = 1L;
 	

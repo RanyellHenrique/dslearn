@@ -11,10 +11,12 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 import com.bootcampdsLearn.entities.enums.DeliverStatus;
 
-@Entity(name = "tb_deliver")
+@Entity
+@Table(name = "tb_deliver")
 public class Deliver implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
